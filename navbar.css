@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 10000px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+    background: linear-gradient(to left,rgba(136, 245, 212, 0.274),rgba(232, 244, 188, 0.805),rgba(150, 238, 194, 0.23));
+}
+.header{
+    width: 100%;
+    background-color: rgb(106, 108, 108);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.nav{
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+.left-nav{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+.right-nav{
+    font-size: 17px;
+    font-weight: 700;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+li a{
+    text-decoration: none;
+    color: bisque;
+    transition: all 0.3s;
+}
+#button{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(65, 65, 136);
+    padding: 7px 18px;
+    font-size: 12px;
+    border-radius: 30px;
+}
+li a:hover{
+    color: grey;
+    background-color: white;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+#button:hover{
+    background-color: rgb(57, 57, 173);
+    color: rgb(206, 210, 207);
+}
+.text{
+    text-align: center;
+}
+p{
+    line-height: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 30px 4px;
+}
+.card{
+    height: 300px;
+    background-image: url("../img/Acer_Wallpaper_01_3840x2400.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    border: 2px solid black;
+}
+.sect{
+    width: 100%;
+    height: 92%;
+    color: white;
+    content-visibility: hidden;
+}
+#name{
+    color: rgba(58, 124, 224, 0.786);
+}
+.sect:hover{
+    font-size: 0.8rem;
+    line-height: 2px;
+    content-visibility: visible;
+    animation-name: text-animation;
+    animation-duration: 1s;
+    overflow-y: scroll;
+}
+.p{
+    height: max-content;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0) ,rgba(144, 214, 239, 0.792),rgba(0, 0, 0, 0) );
+    align-items: center;
+    position: relative;
+    top: 80%;
+}
+@keyframes text-animation{
+    from{font-size: 0;}
+    to{font-size: 0.8rem;}
+}
+@media(max-width:780px){
+    .nav{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .right-nav{
+        padding: 10px 0px;
+    }
+    .text{
+        padding-top: 30px;
+    }
+    .container{
+        grid-template-columns: 1fr 1fr;
+        padding: 20px 1px;
+        overflow-x: hidden;
+    }
+}
+@media(max-width:580px){
+    .right-nav{
+        font-size: 10px;
+        padding: 10px 0px;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        padding: 20px 1px;
+        overflow-x: hidden;
+    }
+}
