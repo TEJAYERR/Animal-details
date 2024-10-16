@@ -78,7 +78,7 @@ p{
 }
 .card{
     height: 300px;
-    background-image: url("../img/Acer_Wallpaper_01_3840x2400.jpg");
+    background-image: url("./img/Acer_Wallpaper_01_3840x2400.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
